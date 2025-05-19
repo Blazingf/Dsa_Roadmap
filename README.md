@@ -1,68 +1,144 @@
-DSA + A-DSA 3-Month Roadmap
-A comprehensive, interactive roadmap to master Data Structures and Algorithms in 3 months. Perfect for interview preparation for product-based companies.
+🚀 3-Month DSA + A-DSA Roadmap (Crack Product-Based Companies)
 
-Features
-🚀 Week-by-week structured learning path
-✅ Interactive checkboxes to track progress
-📊 Progress tracking with localStorage
-📱 Mobile-friendly responsive design
-📤 Export progress feature
-🔄 Reset progress option
-Getting Started
-Local Setup
-Clone the repository:
-bash
-git clone https://github.com/your-username/dsa-roadmap.git
-cd dsa-roadmap
-Open index.html in your browser.
-GitHub Pages Setup
-After cloning the repository, push it to your GitHub account.
-Go to your repository settings.
-Scroll down to the GitHub Pages section.
-Select the main branch as the source.
-Click Save.
-Your roadmap will be available at https://your-username.github.io/dsa-roadmap/.
-How to Use
-Track Progress: Check the boxes as you complete each task.
-Save Progress: Click the "Save Progress" button to save your progress to localStorage.
-Reset Progress: Use the "Reset Progress" button to clear all checkmarks.
-Export Progress: Download your progress as a JSON file for backup.
-Roadmap Content
-The roadmap covers the following topics:
+Tip: Track your progress by checking off completed items. Commit your changes to maintain progress history!
 
-Week 1: Arrays & Hashing
-Week 2: Strings & Sliding Window
-Week 3: Recursion & Backtracking
-Week 4: Linked List
-Week 5: Stacks & Queues
-Week 6: Binary Trees
-Week 7: Binary Search & BST
-Week 8: Graphs
-Week 9: Dynamic Programming - I
-Week 10: Dynamic Programming - II
-Week 11: Advanced DSA - Heaps, Tries, Bit Manipulation
-Week 12: System Design + Revision
-Week 13: Interview Preparation Week
-Customization
-Adding More Problems
-To add more problems to a specific week:
+Progress Tracking
 
-Open index.html
-Locate the week's section
-Add a new list item with a unique ID:
-html
-<li><input type="checkbox" id="task-NEW-ID"> <a href="PROBLEM_URL" target="_blank">Problem Name</a></li>
-Update the TOTAL_TASKS constant in the script.
-Changing Styles
-You can customize the styles by modifying the CSS in the <style> section of index.html.
+ Week 1: Arrays & Hashing (0/5)
+ Week 2: Strings & Sliding Window (0/5)
+ Week 3: Recursion & Backtracking (0/5)
+ Week 4: Linked List (0/5)
+ Week 5: Stacks & Queues (0/5)
+ Week 6: Binary Trees (0/5)
+ Week 7: Binary Search & BST (0/5)
+ Week 8: Graphs (0/5)
+ Week 9: Dynamic Programming - I (0/5)
+ Week 10: Dynamic Programming - II (0/5)
+ Week 11: Advanced DSA - Heaps, Tries, Bit Manipulation (0/5)
+ Week 12: System Design + Revision (0/5)
+ Week 13: Interview Preparation Week (0/5)
 
-Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+📅 Week 1: Arrays & Hashing
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+ Two Sum
+ Group Anagrams
+ Contains Duplicate
+ Maximum Subarray
+ Product of Array Except Self
 
-Acknowledgments
-LeetCode for providing quality DSA problems
-All DSA educators who make learning algorithms accessible
-Made with ❤️ | Happy Coding!
+📅 Week 2: Strings & Sliding Window
+
+ Longest Substring Without Repeating Characters
+ Minimum Window Substring
+ Valid Anagram
+ Valid Palindrome
+ Longest Palindromic Substring
+
+📅 Week 3: Recursion & Backtracking
+
+ Subsets
+ Permutations
+ Letter Combinations of a Phone Number
+ Combinations
+ N-Queens
+
+📅 Week 4: Linked List
+
+ Reverse Linked List
+ Merge Two Sorted Lists
+ Linked List Cycle
+ Remove Nth Node From End
+ Copy List with Random Pointer
+
+📅 Week 5: Stacks & Queues
+
+ Valid Parentheses
+ Min Stack
+ Evaluate Reverse Polish Notation
+ Daily Temperatures
+ Sliding Window Maximum
+
+📅 Week 6: Binary Trees
+
+ Maximum Depth of Binary Tree
+ Invert Binary Tree
+ Diameter of Binary Tree
+ Same Tree
+ Binary Tree Level Order Traversal
+
+📅 Week 7: Binary Search & BST
+
+ Binary Search
+ Search a 2D Matrix
+ Kth Smallest Element in a BST
+ Validate Binary Search Tree
+ Lowest Common Ancestor of BST
+
+📅 Week 8: Graphs
+
+ Number of Islands
+ Clone Graph
+ Course Schedule
+ Network Delay Time
+ Redundant Connection
+
+📅 Week 9: Dynamic Programming - I
+
+ Climbing Stairs
+ House Robber
+ Coin Change
+ Longest Increasing Subsequence
+ Unique Paths
+
+📅 Week 10: Dynamic Programming - II
+
+ Longest Common Subsequence
+ Partition Equal Subset Sum
+ Edit Distance
+ Interleaving String
+ Wildcard Matching
+
+📅 Week 11: Advanced DSA - Heaps, Tries, Bit Manipulation
+
+ Top K Frequent Elements
+ Implement Trie
+ Maximum XOR of Two Numbers
+ Find Median from Data Stream
+ Find Duplicate File in System
+
+📅 Week 12: System Design + Revision
+
+ Review all key problems from previous weeks
+ Build 1 mini system: URL Shortener / Rate Limiter
+ Analyze time/space tradeoffs in core topics
+ Discuss scalability, availability and caching
+ Mock system design interviews (Pramp / Interviewing.io)
+
+📅 Week 13: Interview Preparation Week
+
+ Blind 75 Review
+ FAANG Mock Interviews
+ Pramp/InterviewBit daily mocks
+ Behavioral Interview Questions
+ System Design final mock
+
+
+How to use this roadmap:
+
+Fork this repository to your account
+As you complete tasks, check them off by editing the markdown file:
+
+Change - [ ] to - [x] for completed items
+
+
+Commit your changes to track progress over time
+Update the week summaries at the top as you go (e.g., "Week 1: Arrays & Hashing (3/5)")
+
+Additional Tips
+
+Accountability: Share your progress on LinkedIn or Twitter
+Study Groups: Fork this roadmap and work through it with friends
+Consistency: Aim for at least 2-3 problems per day
+Review: Revisit challenging problems after a few days
+
+✅ Remember: Consistent practice is more important than rushing through topics!
