@@ -4,7 +4,7 @@ Tip: Track your progress by checking off completed items. Commit your changes to
 
 Progress Tracking
 
- - [ ] Week 1: Arrays & Hashing (0/5)
+ - [x] Week 1: Arrays & Hashing (0/5)
  - [ ] Week 2: Strings & Sliding Window (0/5)
  Week 3: Recursion & Backtracking (0/5)
  Week 4: Linked List (0/5)
