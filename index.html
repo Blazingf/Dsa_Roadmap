@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA + A-DSA 3-Month Roadmap</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #222;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .week {
+      margin-bottom: 30px;
+      padding: 15px;
+      border-left: 5px solid #007BFF;
+      background: #f9f9f9;
+      border-radius: 5px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px 0;
+      display: flex;
+      align-items: center;
+    }
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .highlight {
+      background: #e8f0fe;
+      padding: 10px;
+      border-left: 5px solid #4285f4;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+    .stats {
+      background: #e8f0fe;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .progress-bar {
+      height: 20px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+    .progress {
+      height: 100%;
+      background-color: #4caf50;
+      border-radius: 10px;
+      transition: width 0.3s ease;
+    }
+    .actions {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .complete {
+      text-decoration: line-through;
+      color: #28a745;
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+      font-size: 14px;
+    }
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+        padding: 10px;
+      }
+      .week {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 3-Month DSA + A-DSA Roadmap (Crack Product-Based Companies)</h1>
+    
+    <div class="stats">
+      <h3>Your Progress</h3>
+      <div class="progress-bar">
+        <div class="progress" id="progress-bar" style="width: 0%"></div>
+      </div>
+      <p><span id="completed-count">0</span> of <span id="total-count">65</span> tasks completed (<span id="percentage">0%</span>)</p>
+      <div class="actions">
+        <button id="save-btn">💾 Save Progress</button>
+        <button id="reset-btn">🔄 Reset Progress</button>
+        <button id="export-btn">📤 Export Progress</button>
+      </div>
+    </div>
+    
+    <div class="week">
+      <h2>📅 Week 1: Arrays & Hashing</h2>
+      <ul>
+        <li><input type="checkbox" id="task-1"> <a href="https://leetcode.com/problems/two-sum/" target="_blank">Two Sum</a></li>
+        <li><input type="checkbox" id="task-2"> <a href="https://leetcode.com/problems/group-anagrams/" target="_blank">Group Anagrams</a></li>
+        <li><input type="checkbox" id="task-3"> <a href="https://leetcode.com/problems/contains-duplicate/" target="_blank">Contains Duplicate</a></li>
+        <li><input type="checkbox" id="task-4"> <a href="https://leetcode.com/problems/maximum-subarray/" target="_blank">Maximum Subarray</a></li>
+        <li><input type="checkbox" id="task-5"> <a href="https://leetcode.com/problems/product-of-array-except-self/" target="_blank">Product of Array Except Self</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 2: Strings & Sliding Window</h2>
+      <ul>
+        <li><input type="checkbox" id="task-6"> <a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/" target="_blank">Longest Substring Without Repeating Characters</a></li>
+        <li><input type="checkbox" id="task-7"> <a href="https://leetcode.com/problems/minimum-window-substring/" target="_blank">Minimum Window Substring</a></li>
+        <li><input type="checkbox" id="task-8"> <a href="https://leetcode.com/problems/valid-anagram/" target="_blank">Valid Anagram</a></li>
+        <li><input type="checkbox" id="task-9"> <a href="https://leetcode.com/problems/valid-palindrome/" target="_blank">Valid Palindrome</a></li>
+        <li><input type="checkbox" id="task-10"> <a href="https://leetcode.com/problems/longest-palindromic-substring/" target="_blank">Longest Palindromic Substring</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 3: Recursion & Backtracking</h2>
+      <ul>
+        <li><input type="checkbox" id="task-11"> <a href="https://leetcode.com/problems/subsets/" target="_blank">Subsets</a></li>
+        <li><input type="checkbox" id="task-12"> <a href="https://leetcode.com/problems/permutations/" target="_blank">Permutations</a></li>
+        <li><input type="checkbox" id="task-13"> <a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/" target="_blank">Letter Combinations of a Phone Number</a></li>
+        <li><input type="checkbox" id="task-14"> <a href="https://leetcode.com/problems/combinations/" target="_blank">Combinations</a></li>
+        <li><input type="checkbox" id="task-15"> <a href="https://leetcode.com/problems/n-queens/" target="_blank">N-Queens</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 4: Linked List</h2>
+      <ul>
+        <li><input type="checkbox" id="task-16"> <a href="https://leetcode.com/problems/reverse-linked-list/" target="_blank">Reverse Linked List</a></li>
+        <li><input type="checkbox" id="task-17"> <a href="https://leetcode.com/problems/merge-two-sorted-lists/" target="_blank">Merge Two Sorted Lists</a></li>
+        <li><input type="checkbox" id="task-18"> <a href="https://leetcode.com/problems/linked-list-cycle/" target="_blank">Linked List Cycle</a></li>
+        <li><input type="checkbox" id="task-19"> <a href="https://leetcode.com/problems/remove-nth-node-from-end-of-list/" target="_blank">Remove Nth Node From End</a></li>
+        <li><input type="checkbox" id="task-20"> <a href="https://leetcode.com/problems/copy-list-with-random-pointer/" target="_blank">Copy List with Random Pointer</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 5: Stacks & Queues</h2>
+      <ul>
+        <li><input type="checkbox" id="task-21"> <a href="https://leetcode.com/problems/valid-parentheses/" target="_blank">Valid Parentheses</a></li>
+        <li><input type="checkbox" id="task-22"> <a href="https://leetcode.com/problems/min-stack/" target="_blank">Min Stack</a></li>
+        <li><input type="checkbox" id="task-23"> <a href="https://leetcode.com/problems/evaluate-reverse-polish-notation/" target="_blank">Evaluate Reverse Polish Notation</a></li>
+        <li><input type="checkbox" id="task-24"> <a href="https://leetcode.com/problems/daily-temperatures/" target="_blank">Daily Temperatures</a></li>
+        <li><input type="checkbox" id="task-25"> <a href="https://leetcode.com/problems/sliding-window-maximum/" target="_blank">Sliding Window Maximum</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 6: Binary Trees</h2>
+      <ul>
+        <li><input type="checkbox" id="task-26"> <a href="https://leetcode.com/problems/maximum-depth-of-binary-tree/" target="_blank">Maximum Depth of Binary Tree</a></li>
+        <li><input type="checkbox" id="task-27"> <a href="https://leetcode.com/problems/invert-binary-tree/" target="_blank">Invert Binary Tree</a></li>
+        <li><input type="checkbox" id="task-28"> <a href="https://leetcode.com/problems/diameter-of-binary-tree/" target="_blank">Diameter of Binary Tree</a></li>
+        <li><input type="checkbox" id="task-29"> <a href="https://leetcode.com/problems/same-tree/" target="_blank">Same Tree</a></li>
+        <li><input type="checkbox" id="task-30"> <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/" target="_blank">Binary Tree Level Order Traversal</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 7: Binary Search & BST</h2>
+      <ul>
+        <li><input type="checkbox" id="task-31"> <a href="https://leetcode.com/problems/binary-search/" target="_blank">Binary Search</a></li>
+        <li><input type="checkbox" id="task-32"> <a href="https://leetcode.com/problems/search-a-2d-matrix/" target="_blank">Search a 2D Matrix</a></li>
+        <li><input type="checkbox" id="task-33"> <a href="https://leetcode.com/problems/kth-smallest-element-in-a-bst/" target="_blank">Kth Smallest Element in a BST</a></li>
+        <li><input type="checkbox" id="task-34"> <a href="https://leetcode.com/problems/validate-binary-search-tree/" target="_blank">Validate Binary Search Tree</a></li>
+        <li><input type="checkbox" id="task-35"> <a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/" target="_blank">Lowest Common Ancestor of BST</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 8: Graphs</h2>
+      <ul>
+        <li><input type="checkbox" id="task-36"> <a href="https://leetcode.com/problems/number-of-islands/" target="_blank">Number of Islands</a></li>
+        <li><input type="checkbox" id="task-37"> <a href="https://leetcode.com/problems/clone-graph/" target="_blank">Clone Graph</a></li>
+        <li><input type="checkbox" id="task-38"> <a href="https://leetcode.com/problems/course-schedule/" target="_blank">Course Schedule</a></li>
+        <li><input type="checkbox" id="task-39"> <a href="https://leetcode.com/problems/network-delay-time/" target="_blank">Network Delay Time</a></li>
+        <li><input type="checkbox" id="task-40"> <a href="https://leetcode.com/problems/redundant-connection/" target="_blank">Redundant Connection</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 9: Dynamic Programming - I</h2>
+      <ul>
+        <li><input type="checkbox" id="task-41"> <a href="https://leetcode.com/problems/climbing-stairs/" target="_blank">Climbing Stairs</a></li>
+        <li><input type="checkbox" id="task-42"> <a href="https://leetcode.com/problems/house-robber/" target="_blank">House Robber</a></li>
+        <li><input type="checkbox" id="task-43"> <a href="https://leetcode.com/problems/coin-change/" target="_blank">Coin Change</a></li>
+        <li><input type="checkbox" id="task-44"> <a href="https://leetcode.com/problems/longest-increasing-subsequence/" target="_blank">Longest Increasing Subsequence</a></li>
+        <li><input type="checkbox" id="task-45"> <a href="https://leetcode.com/problems/unique-paths/" target="_blank">Unique Paths</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 10: Dynamic Programming - II</h2>
+      <ul>
+        <li><input type="checkbox" id="task-46"> <a href="https://leetcode.com/problems/longest-common-subsequence/" target="_blank">Longest Common Subsequence</a></li>
+        <li><input type="checkbox" id="task-47"> <a href="https://leetcode.com/problems/partition-equal-subset-sum/" target="_blank">Partition Equal Subset Sum</a></li>
+        <li><input type="checkbox" id="task-48"> <a href="https://leetcode.com/problems/edit-distance/" target="_blank">Edit Distance</a></li>
+        <li><input type="checkbox" id="task-49"> <a href="https://leetcode.com/problems/interleaving-string/" target="_blank">Interleaving String</a></li>
+        <li><input type="checkbox" id="task-50"> <a href="https://leetcode.com/problems/wildcard-matching/" target="_blank">Wildcard Matching</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 11: Advanced DSA - Heaps, Tries, Bit Manipulation</h2>
+      <ul>
+        <li><input type="checkbox" id="task-51"> <a href="https://leetcode.com/problems/top-k-frequent-elements/" target="_blank">Top K Frequent Elements</a></li>
+        <li><input type="checkbox" id="task-52"> <a href="https://leetcode.com/problems/implement-trie-prefix-tree/" target="_blank">Implement Trie</a></li>
+        <li><input type="checkbox" id="task-53"> <a href="https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/" target="_blank">Maximum XOR of Two Numbers</a></li>
+        <li><input type="checkbox" id="task-54"> <a href="https://leetcode.com/problems/find-median-from-data-stream/" target="_blank">Find Median from Data Stream</a></li>
+        <li><input type="checkbox" id="task-55"> <a href="https://leetcode.com/problems/find-duplicate-file-in-system/" target="_blank">Find Duplicate File in System</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 12: System Design + Revision</h2>
+      <ul>
+        <li><input type="checkbox" id="task-56"> <a href="https://leetcode.com/problemset/all/" target="_blank">Review all key problems from previous weeks</a></li>
+        <li><input type="checkbox" id="task-57"> <a href="https://github.com/donnemartin/system-design-primer" target="_blank">Build 1 mini system: URL Shortener / Rate Limiter</a></li>
+        <li><input type="checkbox" id="task-58"> <a href="https://www.bigocheatsheet.com/" target="_blank">Analyze time/space tradeoffs in core topics</a></li>
+        <li><input type="checkbox" id="task-59"> <a href="https://www.geeksforgeeks.org/scalability-in-distributed-systems/" target="_blank">Discuss scalability, availability and caching</a></li>
+        <li><input type="checkbox" id="task-60"> <a href="https://www.pramp.com/" target="_blank">Mock system design interviews (Pramp / Interviewing.io)</a></li>
+      </ul>
+    </div>
+
+    <div class="week">
+      <h2>📅 Week 13: Interview Preparation Week</h2>
+      <ul>
+        <li><input type="checkbox" id="task-61"> <a href="https://leetcode.com/list/xi4ci4ig" target="_blank">Blind 75 Review</a></li>
+        <li><input type="checkbox" id="task-62"> <a href="https://www.interviewing.io/" target="_blank">FAANG Mock Interviews</a></li>
+        <li><input type="checkbox" id="task-63"> <a href="https://www.interviewbit.com/" target="_blank">Pramp/InterviewBit daily mocks</a></li>
+        <li><input type="checkbox" id="task-64"> <a href="https://www.linkedin.com/pulse/top-30-behavioral-interview-questions-answers-anil-daga/" target="_blank">Behavioral Interview Questions</a></li>
+        <li><input type="checkbox" id="task-65"> <a href="https://github.com/donnemartin/system-design-primer" target="_blank">System Design final mock</a></li>
+      </ul>
+    </div>
+
+    <div class="highlight">
+      ✅ <strong>Tip:</strong> Track progress daily. Once you complete a week, share a screenshot on GitHub or LinkedIn to stay accountable and motivated!
+    </div>
+  </div>
+
+  <footer>
+    <p>Created with ❤️ | Fork on <a href="https://github.com/yourusername/dsa-roadmap" target="_blank">GitHub</a></p>
+  </footer>
+
+  <script>
+    // Total number of tasks
+    const TOTAL_TASKS = 65;
+    
+    // Function to update progress
+    function updateProgress() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      let completed = 0;
+      
+      checkboxes.forEach(checkbox => {
+        if (checkbox.checked) {
+          completed++;
+          // Add strikethrough to completed task's parent li
+          checkbox.parentElement.classList.add('complete');
+        } else {
+          checkbox.parentElement.classList.remove('complete');
+        }
+      });
+      
+      const percentage = Math.round((completed / TOTAL_TASKS) * 100);
+      
+      // Update progress bar and stats
+      document.getElementById('completed-count').textContent = completed;
+      document.getElementById('percentage').textContent = percentage + '%';
+      document.getElementById('progress-bar').style.width = percentage + '%';
+      
+      return { completed, percentage };
+    }
+    
+    // Function to save progress to localStorage
+    function saveProgress() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const progress = {};
+      
+      checkboxes.forEach(checkbox => {
+        progress[checkbox.id] = checkbox.checked;
+      });
+      
+      localStorage.setItem('dsaRoadmapProgress', JSON.stringify(progress));
+      alert('Progress saved successfully!');
+    }
+    
+    // Function to load progress from localStorage
+    function loadProgress() {
+      const savedProgress = localStorage.getItem('dsaRoadmapProgress');
+      
+      if (savedProgress) {
+        const progress = JSON.parse(savedProgress);
+        
+        Object.keys(progress).forEach(id => {
+          const checkbox = document.getElementById(id);
+          if (checkbox) {
+            checkbox.checked = progress[id];
+          }
+        });
+        
+        updateProgress();
+      }
+    }
+    
+    // Function to reset progress
+    function resetProgress() {
+      if (confirm('Are you sure you want to reset all progress?')) {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(checkbox => {
+          checkbox.checked = false;
+          checkbox.parentElement.classList.remove('complete');
+        });
+        
+        localStorage.removeItem('dsaRoadmapProgress');
+        updateProgress();
+        alert('Progress has been reset!');
+      }
+    }
+    
+    // Function to export progress as JSON
+    function exportProgress() {
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      const progress = {};
+      
+      checkboxes.forEach(checkbox => {
+        progress[checkbox.id] = checkbox.checked;
+      });
+      
+      const stats = updateProgress();
+      const exportData = {
+        date: new Date().toISOString(),
+        stats: {
+          completed: stats.completed,
+          total: TOTAL_TASKS,
+          percentage: stats.percentage
+        },
+        progress: progress
+      };
+      
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportData, null, 2));
+      const downloadAnchorNode = document.createElement('a');
+      downloadAnchorNode.setAttribute("href", dataStr);
+      downloadAnchorNode.setAttribute("download", "dsa_roadmap_progress.json");
+      document.body.appendChild(downloadAnchorNode);
+      downloadAnchorNode.click();
+      downloadAnchorNode.remove();
+    }
+    
+    // Add event listeners
+    document.addEventListener('DOMContentLoaded', () => {
+      // Load saved progress
+      loadProgress();
+      
+      // Add event listeners to checkboxes
+      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+      checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', () => {
+          updateProgress();
+        });
+      });
+      
+      // Add event listeners to buttons
+      document.getElementById('save-btn').addEventListener('click', saveProgress);
+      document.getElementById('reset-btn').addEventListener('click', resetProgress);
+      document.getElementById('export-btn').addEventListener('click', exportProgress);
+      
+      // Initial progress update
+      updateProgress();
+    });
+  </script>
+</body>
+</html>
