@@ -286,103 +286,97 @@
   </footer>
 
   <script>
-    // Total number of tasks
-    const TOTAL_TASKS = 65;
-    
-    // Function to update progress
-    function updateProgress() {
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      let completed = 0;
-      
-      checkboxes.forEach(checkbox => {
-        if (checkbox.checked) {
-          completed++;
-          // Add strikethrough to completed task's parent li
-          checkbox.parentElement.classList.add('complete');
-        } else {
-          checkbox.parentElement.classList.remove('complete');
-        }
-      });
-      
-      const percentage = Math.round((completed / TOTAL_TASKS) * 100);
-      
-      // Update progress bar and stats
-      document.getElementById('completed-count').textContent = completed;
-      document.getElementById('percentage').textContent = percentage + '%';
-      document.getElementById('progress-bar').style.width = percentage + '%';
-      
-      return { completed, percentage };
-    }
-    
+  const totalTasks = 65;
 
-    
-  
-    
-    // Function to reset progress
-    function resetProgress() {
-      if (confirm('Are you sure you want to reset all progress?')) {
-        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(checkbox => {
-          checkbox.checked = false;
-          checkbox.parentElement.classList.remove('complete');
-        });
-        
-        localStorage.removeItem('dsaRoadmapProgress');
+  // Initialize checkbox listeners
+  function init() {
+    for (let i = 1; i <= totalTasks; i++) {
+      const checkbox = document.getElementById(`task-${i}`);
+      if (!checkbox) continue;
+
+      // Load saved state
+      const saved = localStorage.getItem(`task-${i}`);
+      if (saved === 'true') {
+        checkbox.checked = true;
+        checkbox.parentElement.classList.add('complete');
+      }
+
+      checkbox.addEventListener('change', () => {
+        localStorage.setItem(`task-${i}`, checkbox.checked);
         updateProgress();
-        alert('Progress has been reset!');
+      });
+    }
+    updateProgress();
+  }
+
+  // Update progress bar and count
+  function updateProgress() {
+    let completed = 0;
+    for (let i = 1; i <= totalTasks; i++) {
+      const checkbox = document.getElementById(`task-${i}`);
+      if (!checkbox) continue;
+
+      if (checkbox.checked) {
+        completed++;
+        checkbox.parentElement.classList.add('complete');
+      } else {
+        checkbox.parentElement.classList.remove('complete');
       }
     }
-    
-    // Function to export progress as JSON
-    function exportProgress() {
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      const progress = {};
-      
-      checkboxes.forEach(checkbox => {
-        progress[checkbox.id] = checkbox.checked;
-      });
-      
-      const stats = updateProgress();
-      const exportData = {
-        date: new Date().toISOString(),
-        stats: {
-          completed: stats.completed,
-          total: TOTAL_TASKS,
-          percentage: stats.percentage
-        },
-        progress: progress
-      };
-      
-      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(exportData, null, 2));
-      const downloadAnchorNode = document.createElement('a');
-      downloadAnchorNode.setAttribute("href", dataStr);
-      downloadAnchorNode.setAttribute("download", "dsa_roadmap_progress.json");
-      document.body.appendChild(downloadAnchorNode);
-      downloadAnchorNode.click();
-      downloadAnchorNode.remove();
+
+    const percentage = Math.round((completed / totalTasks) * 100);
+    document.getElementById('completed-count').textContent = completed;
+    document.getElementById('percentage').textContent = percentage + '%';
+    document.getElementById('progress-bar').style.width = percentage + '%';
+  }
+
+  // Save all checkbox states to localStorage (optional button)
+  document.getElementById('save-btn').addEventListener('click', () => {
+    for (let i = 1; i <= totalTasks; i++) {
+      const checkbox = document.getElementById(`task-${i}`);
+      if (checkbox) {
+        localStorage.setItem(`task-${i}`, checkbox.checked);
+      }
     }
-    
-    // Add event listeners
-    document.addEventListener('DOMContentLoaded', () => {
-      // Load saved progress
-      loadProgress();
-      
-      // Add event listeners to checkboxes
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', () => {
-          updateProgress();
-        });
-      });
-      
-      // Add event listeners to buttons
-      document.getElementById('save-btn').addEventListener('click', saveProgress);
-      document.getElementById('reset-btn').addEventListener('click', resetProgress);
-      document.getElementById('export-btn').addEventListener('click', exportProgress);
-      
-      // Initial progress update
-      updateProgress();
-    });
-  </script>
+    alert('Progress saved!');
+  });
+
+  // Reset all checkboxes and localStorage
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    if (!confirm('Are you sure you want to reset all progress?')) return;
+    for (let i = 1; i <= totalTasks; i++) {
+      localStorage.removeItem(`task-${i}`);
+      const checkbox = document.getElementById(`task-${i}`);
+      if (checkbox) {
+        checkbox.checked = false;
+        checkbox.parentElement.classList.remove('complete');
+      }
+    }
+    updateProgress();
+  });
+
+  // Export progress as JSON
+  document.getElementById('export-btn').addEventListener('click', () => {
+    const progress = {};
+    for (let i = 1; i <= totalTasks; i++) {
+      const checkbox = document.getElementById(`task-${i}`);
+      if (checkbox) {
+        progress[`task-${i}`] = checkbox.checked;
+      }
+    }
+    const blob = new Blob([JSON.stringify(progress, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'dsa-progress.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  // Run init on page load
+  window.onload = init;
+</script>
+
 </body>
 </html>
